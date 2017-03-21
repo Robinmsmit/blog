@@ -1,13 +1,29 @@
-<!DOCTYPE html>
-<html>
 
 <?php
 
-$countdown = date("h:i:s");
+require_once 'connection.php';
+session_start();
+
+  if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true) {
+
+      // Gebruiker niet ingelogd
+      header("Location: login.php");
+
+      
+  }
+
+
+$stmt = $dbh->prepare("SELECT * FROM `logins` WHERE id = :id"); 
+$stmt->execute([
+  ':id' => $_SESSION['user_id']
+]);
+$result = $stmt->fetchObject();
+
+
+$date = "$result->start_time";
 
 ?>
-
-
+<html>
 <head>
    <link rel="stylesheet" type="text/css" href="style.css">
    <script src="https://use.fontawesome.com/956de693bd.js"></script>
@@ -22,8 +38,8 @@ $countdown = date("h:i:s");
             <img src="http://placehold.it/350x150" alt="Smiley face" align="middle"> 
         </div>
         <div class="profile_info">
-            <span>Hallo, </span>
-            <h2> Robin Smit</h2>
+            <span><?php echo "Welkom, "; ?></span>
+            <h2> <?php echo "$result->voornaam $result->achternaam!"; ?></h2>
         </div>
       </div>
         <!-- Hier komt welkomsbericht !! -->
@@ -31,6 +47,8 @@ $countdown = date("h:i:s");
         <a href="#">Services</a>
         <a href="#">Clients</a>
         <a href="#">Contact</a>
+        <a href="logout.php">log hier uit</a>
+
     </div>
 
 </div>
@@ -49,7 +67,7 @@ $countdown = date("h:i:s");
           <span class="count_title">
             <i class="fa fa-clock-o" aria-hidden="true"></i> Ingelogde tijd
           </span>
-          <div class="count"> 10000 </div>
+          <div class="count"> <?php echo gmdate("H:i:s", $date); ?></div>
           <span class="bottom_title">Bottom Title</span>
     </div>
     <div class="col-md-3 col-sm-4 col-xs-6 title_stats">
