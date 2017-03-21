@@ -37,21 +37,22 @@ $countdown = date("h:i:s");
 
 <div class="right_col" role="main" style="min-height: 1704px;">
   <div class="row tile_count">
-    <div class="col-md-2 col-sm-4 col-xs-6 title_stats">
+  <div class="items">
+    <div class="col-md-3 col-sm-4 col-xs-6 title_stats">
           <span class="count_title">
             <i class="fa fa-check" aria-hidden="true"></i> Aantal logins
           </span>
           <div class="count"> 10000 </div>
           <span class="bottom_title">Bottom Title</span>
     </div>
-   <div class="col-md-2 col-sm-4 col-xs-6 title_stats">
+   <div class="col-md-3 col-sm-4 col-xs-6 title_stats">
           <span class="count_title">
             <i class="fa fa-clock-o" aria-hidden="true"></i> Ingelogde tijd
           </span>
           <div class="count"> 10000 </div>
           <span class="bottom_title">Bottom Title</span>
     </div>
-    <div class="col-md-2 col-sm-4 col-xs-6 title_stats">
+    <div class="col-md-3 col-sm-4 col-xs-6 title_stats">
           <span class="count_title">
             <i class="fa fa-hourglass-half" aria-hidden="true"></i> Actuele tijd
           </span>
@@ -60,13 +61,14 @@ $countdown = date("h:i:s");
            </script> </div>
           <span class="bottom_title">Bottom Title</span>
     </div>
-     <div class="col-md-2 col-sm-4 col-xs-6 title_stats">
+     <div class="col-md-3 col-sm-4 col-xs-6 title_stats">
           <span class="count_title">
             <i class="fa fa-calendar-o" aria-hidden="true"></i> Datum
           </span>
           <div class="count"> <?php echo date("Y-m-d");?> </div>
           <span class="bottom_title">Bottom Title</span>
     </div>
+  </div>
   </div>
 </div>
 <script>
