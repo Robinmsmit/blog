@@ -1,0 +1,180 @@
+body {
+    font-family: "Lato", sans-serif;
+    margin: 0;
+}
+
+.right_col{
+    padding: 10px 20px 0;
+    margin-left: 230px;  
+}
+
+.left_col{
+    min-height: 100%;
+    width: 250px;
+    padding: 0;
+    position: absolute;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 1;
+    background-color: #2A3F54;
+}
+
+.title_stats{
+    margin-bottom: 10px;
+    border-bottom: 0;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.title_stats:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 65px;
+    border-left: 2px solid #ADB2B5;
+    margin-top: 10px;
+}
+
+.sidenav {
+    display: block;  
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #2A3F54;
+    overflow-x: hidden;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    text-align: inherit !important;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.open-menu a{
+    color: #818181;
+    font-size:30px;
+    cursor:pointer;
+    text-decoration: none;
+}
+
+.open-menu a:hover{
+    color: #f1f1f1;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.count{
+   /* font-size: 30px;*/
+    line-height: 47px;
+    font-weight: 600;
+    color: #73879C;
+}
+
+.count_title,
+.bottom_title{
+    font-size: 13px;
+    color: #73879C;
+}
+
+.title_stats{
+    margin-bottom: 10px;
+    border-bottom: 0;
+    padding: 0 10px 0 20px;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+ 
+}
+
+.col-md-2{
+    width: 16.66666667%; 
+}
+
+
+ .tile_count {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.row {
+    margin-right: -10px;
+    margin-left: -10px;
+}
+
+.btn-group-vertical>.btn-group:after, .btn-group-vertical>.btn-group:before, .btn-toolbar:after, .btn-toolbar:before, .clearfix:after, .clearfix:before, .container-fluid:after, .container-fluid:before, .container:after, .container:before, .dl-horizontal dd:after, .dl-horizontal dd:before, .form-horizontal .form-group:after, .form-horizontal .form-group:before, .modal-footer:after, .modal-footer:before, .modal-header:after, .modal-header:before, .nav:after, .nav:before, .navbar-collapse:after, .navbar-collapse:before, .navbar-header:after, .navbar-header:before, .navbar:after, .navbar:before, .pager:after, .pager:before, .panel-body:after, .panel-body:before, .row:after, .row:before {
+    display: table;
+    content: " ";
+}
+
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-55, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9{
+    float:left;
+   
+}
+
+
+.profile.clearfix{
+    width: 230px;
+    height: 80px;
+
+}
+.profile_pic{
+    width: 35%;
+    float: left;
+}
+.profile_pic img{
+    width: 100%;
+    background: #fff;
+    margin-left: 40%;
+    z-index: 1000;
+    position: inherit;
+    margin-top: 20px;
+    border: 1px solid rgba(52,73,94,.44);
+    padding: 4px;
+}
+
+.profile_info h2 {
+    font-size: 14px;
+    color: #ECF0F1;
+    margin: 0;
+    font-weight: 300;
+    margin-top: 5px;
+    margin-left: 50%;
+}
+
+.profile_info span {
+    font-size: 13px;
+   /* line-height: 30px;*/
+    color: #BAB8B8;
+    margin-top: 20px;
+    margin-left: 50%;
+}
+
+.profile_info {
+    margin-top: 20px;
+    width: 65%;
+    float: left;
+}
